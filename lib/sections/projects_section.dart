@@ -41,7 +41,12 @@ class ProjectsSection extends StatelessWidget {
                     (l) => OutlinedButton.icon(
                       onPressed: () => _open(l.$2),
                       icon: Icon(
-                        l.$1.contains('Play') ? Icons.android : Icons.apple,
+                        l.$1.toLowerCase().contains('play')
+                            ? Icons.android
+                            : l.$1.toLowerCase().contains('github') ||
+                                  l.$1.toLowerCase().contains('repo')
+                            ? Icons.code
+                            : Icons.apple,
                       ),
                       label: Text(l.$1),
                     ),
@@ -124,6 +129,30 @@ class ProjectsSection extends StatelessWidget {
                 (
                   'Google Play',
                   'https://play.google.com/store/apps/details?id=com.ogee',
+                ),
+              ],
+            ),
+            _card(
+              context,
+              title: 'Clean Architecture Riverpod Template',
+              description:
+                  'Production-ready Flutter template demonstrating clean architecture principles with Riverpod state management. Features layered architecture (data, domain, presentation), dependency injection, error handling, and best practices for scalable app development.',
+              links: const [
+                (
+                  'GitHub',
+                  'https://github.com/mohadmed-adel/clean-architecture-riverpod.git',
+                ),
+              ],
+            ),
+            _card(
+              context,
+              title: 'Clean Architecture BLoC Template',
+              description:
+                  'Flutter template showcasing clean architecture with BLoC pattern state management. Includes feature-based structure, Freezed for immutable models, GoRouter for navigation, dependency injection with GetIt, and comprehensive testing setup. Demonstrates event-driven architecture with proper separation of concerns.',
+              links: const [
+                (
+                  'GitHub',
+                  'https://github.com/mohadmed-adel/clean-architecture-riverpod/tree/bloc',
                 ),
               ],
             ),
