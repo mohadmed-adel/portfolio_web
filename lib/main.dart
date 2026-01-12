@@ -96,8 +96,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                 const SizedBox(width: 8),
                 FilledButton.icon(
                   onPressed: () => downloadFile(
-                    '/Mohamed_Adel_Senior_Flutter_CV.pdf',
-                    fileName: 'Mohamed_Adel_Senior_Flutter_CV.pdf',
+                    '/Mohamed_Adel_CV.pdf',
+                    fileName: 'Mohamed_Adel_CV.pdf',
                   ),
                   icon: const Icon(Icons.picture_as_pdf),
                   label: const Text('Download CV'),
@@ -164,8 +164,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                     onTap: () {
                       Navigator.pop(context);
                       downloadFile(
-                        '/Mohamed_Adel_Senior_Flutter_CV.pdf',
-                        fileName: 'Mohamed_Adel_Senior_Flutter_CV.pdf',
+                        '/Mohamed_Adel_CV.pdf',
+                        fileName: 'Mohamed_Adel_CV.pdf',
                       );
                     },
                   ),

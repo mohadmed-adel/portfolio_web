@@ -95,8 +95,8 @@ class _IntroText extends StatelessWidget {
         const SizedBox(height: 20),
         FilledButton.icon(
           onPressed: () => downloadFile(
-            '/Mohamed_Adel_Senior_Flutter_CV.pdf',
-            fileName: 'Mohamed_Adel_Senior_Flutter_CV.pdf',
+            '/Mohamed_Adel_CV.pdf',
+            fileName: 'Mohamed_Adel_CV.pdf',
           ),
           icon: const Icon(Icons.picture_as_pdf),
           label: const Text('Download CV (PDF)'),
