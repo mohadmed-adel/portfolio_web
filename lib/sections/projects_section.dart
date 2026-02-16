@@ -18,7 +18,17 @@ class ProjectsSection extends StatelessWidget {
     required List<(String, String)> links, // (label, url)
   }) {
     return Card(
-      elevation: 0,
+      elevation: 4,
+      shadowColor: Colors.black26,
+      color: Theme.of(context).colorScheme.surfaceContainer,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: Theme.of(
+            context,
+          ).colorScheme.outlineVariant.withValues(alpha: 0.2),
+        ),
+      ),
       clipBehavior: Clip.antiAlias,
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -74,9 +84,9 @@ class ProjectsSection extends StatelessWidget {
           final List<Widget> cards = [
             _card(
               context,
-              title: 'Tell Me Now',
+              title: 'Tell Me',
               description:
-                  'Task collaboration and messaging app with phone‑number sign‑in and real‑time updates.',
+                  'Task-driven collaboration platform with secure phone authentication, real-time messaging, and scalable backend integration.',
               links: const [
                 (
                   'App Store',
@@ -86,15 +96,34 @@ class ProjectsSection extends StatelessWidget {
             ),
             _card(
               context,
-              title: 'AicTime',
+              title: 'AICTIME',
               description:
-                  'Real‑time attendance tracking with biometric & IoT integration.',
+                  'Enterprise IoT attendance system with biometric integration, secure low-latency data sync, and high reliability.',
               links: const [
                 (
                   'App Store',
                   'https://apps.apple.com/eg/app/aictime/id1642321818',
                 ),
               ],
+            ),
+            _card(
+              context,
+              title: 'AgriUnions',
+              description:
+                  'Large-scale marketplace for the Saudi agricultural sector featuring advanced search, secure payments, and real-time tracking.',
+              links: const [
+                (
+                  'App Store',
+                  'https://apps.apple.com/eg/app/%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9-%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9/id1445694218',
+                ),
+              ],
+            ),
+            _card(
+              context,
+              title: 'Zontec',
+              description:
+                  'Event management platform with real-time booking, check-in system, and optimized UI/UX for high concurrency.',
+              links: const [], // No link provided in CV
             ),
             _card(
               context,
@@ -105,18 +134,6 @@ class ProjectsSection extends StatelessWidget {
                 (
                   'App Store',
                   'https://apps.apple.com/eg/app/erba7/id6751342864',
-                ),
-              ],
-            ),
-            _card(
-              context,
-              title: 'المنصة الزراعية',
-              description:
-                  'Agricultural platform connecting farmers and traders with marketplace services.',
-              links: const [
-                (
-                  'App Store',
-                  'https://apps.apple.com/eg/app/%D8%A7%D9%84%D9%85%D9%86%D8%B5%D8%A9-%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9/id1445694218',
                 ),
               ],
             ),
@@ -134,24 +151,16 @@ class ProjectsSection extends StatelessWidget {
             ),
             _card(
               context,
-              title: 'Clean Architecture Riverpod Template',
+              title: 'Clean Architecture Boilerplates',
               description:
-                  'Production-ready Flutter template demonstrating clean architecture principles with Riverpod state management. Features layered architecture (data, domain, presentation), dependency injection, error handling, and best practices for scalable app development.',
+                  'Modular Flutter boilerplates (Riverpod & BLoC) adopted across production apps to improve development speed and code consistency.',
               links: const [
                 (
-                  'GitHub',
+                  'Riverpod Repo',
                   'https://github.com/mohadmed-adel/clean-architecture-riverpod.git',
                 ),
-              ],
-            ),
-            _card(
-              context,
-              title: 'Clean Architecture BLoC Template',
-              description:
-                  'Flutter template showcasing clean architecture with BLoC pattern state management. Includes feature-based structure, Freezed for immutable models, GoRouter for navigation, dependency injection with GetIt, and comprehensive testing setup. Demonstrates event-driven architecture with proper separation of concerns.',
-              links: const [
                 (
-                  'GitHub',
+                  'BLoC Repo',
                   'https://github.com/mohadmed-adel/clean-architecture-riverpod/tree/bloc',
                 ),
               ],

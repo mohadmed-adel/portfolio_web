@@ -24,7 +24,17 @@ class ExperienceSection extends StatelessWidget {
           const SectionTitle('Professional Experience'),
           const SizedBox(height: 12),
           Card(
-            elevation: 0,
+            elevation: 2,
+            shadowColor: Colors.black12,
+            color: Theme.of(context).colorScheme.surfaceContainer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Theme.of(
+                  context,
+                ).colorScheme.outlineVariant.withValues(alpha: 0.2),
+              ),
+            ),
             clipBehavior: Clip.antiAlias,
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -39,16 +49,16 @@ class ExperienceSection extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   _bullet(
-                    'Lead end‑to‑end mobile development for multiple production Flutter apps.',
+                    'Leading end-to-end development of multiple production Flutter applications.',
                   ),
                   _bullet(
-                    'Implemented Clean Architecture, modular codebases, and optimized performance.',
+                    'Standardized Clean Architecture and modular codebases, reducing technical debt.',
                   ),
                   _bullet(
-                    'Managed app publishing to Play Store & App Store with CI/CD pipelines.',
+                    'Automated build & release workflows using CI/CD pipelines.',
                   ),
                   _bullet(
-                    'Collaborated across teams to ensure high‑quality releases and mentoring juniors.',
+                    'Mentored junior developers and enforced high-quality code reviews.',
                   ),
                 ],
               ),
@@ -56,7 +66,17 @@ class ExperienceSection extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Card(
-            elevation: 0,
+            elevation: 2,
+            shadowColor: Colors.black12,
+            color: Theme.of(context).colorScheme.surfaceContainer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Theme.of(
+                  context,
+                ).colorScheme.outlineVariant.withValues(alpha: 0.2),
+              ),
+            ),
             clipBehavior: Clip.antiAlias,
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -71,16 +91,13 @@ class ExperienceSection extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   _bullet(
-                    'Developed and maintained production‑ready Flutter applications.',
+                    'Developed enterprise Flutter applications for clients across the MENA region.',
                   ),
                   _bullet(
-                    'Integrated biometrics, IoT, and real‑time data synchronization for enterprise clients.',
+                    'Worked closely with IoT and hardware teams to align mobile and device features.',
                   ),
                   _bullet(
-                    'Delivered optimized mobile solutions ensuring smooth performance and scalability.',
-                  ),
-                  _bullet(
-                    'Collaborated with backend and hardware teams for alignment and testing.',
+                    'Optimized rendering and memory usage to maintain 60 FPS on mid-range devices.',
                   ),
                 ],
               ),
@@ -88,7 +105,17 @@ class ExperienceSection extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Card(
-            elevation: 0,
+            elevation: 2,
+            shadowColor: Colors.black12,
+            color: Theme.of(context).colorScheme.surfaceContainer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: BorderSide(
+                color: Theme.of(
+                  context,
+                ).colorScheme.outlineVariant.withValues(alpha: 0.2),
+              ),
+            ),
             clipBehavior: Clip.antiAlias,
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -103,13 +130,10 @@ class ExperienceSection extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   _bullet(
-                    'Delivered staging and production apps in Flutter for diverse clients.',
+                    'Delivered cross-platform mobile apps for startups and enterprise clients.',
                   ),
                   _bullet(
-                    'Optimized app performance and improved UI responsiveness for low‑end devices.',
-                  ),
-                  _bullet(
-                    'Integrated secure APIs and payment gateways ensuring data integrity.',
+                    'Integrated third-party APIs and payment systems with a strong focus on security.',
                   ),
                 ],
               ),

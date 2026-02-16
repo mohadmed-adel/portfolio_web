@@ -9,13 +9,15 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ColorScheme scheme = Theme.of(context).colorScheme;
+    final Color primary = Theme.of(context).colorScheme.primary;
+    final Color surface = Theme.of(context).colorScheme.surface;
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [scheme.primaryContainer, scheme.surface],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          colors: [primary.withValues(alpha: 0.15), surface],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
         ),
       ),
       child: ConstrainedLayout(
@@ -61,7 +63,7 @@ class _IntroText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Senior Flutter Engineer",
+          "Senior Mobile Application Developer (Flutter)",
           style: Theme.of(
             context,
           ).textTheme.titleMedium?.copyWith(color: primary),
@@ -75,8 +77,8 @@ class _IntroText extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         const Text(
-          '4+ years designing, developing, and deploying cross‑platform Flutter apps.\n'
-          'Expert in clean architecture, state management, CI/CD, and performance.',
+          'Performance-driven Senior Mobile Developer with 4+ years specializing in Flutter.\n'
+          'Expertise in Clean Architecture, modular systems, and enterprise-grade apps.',
         ),
         const SizedBox(height: 16),
         Wrap(
@@ -86,9 +88,8 @@ class _IntroText extends StatelessWidget {
             SkillChip('Flutter'),
             SkillChip('Dart'),
             SkillChip('Clean Architecture'),
-            SkillChip('BLoC / Riverpod / GetX'),
-            SkillChip('REST / GraphQL'),
-            SkillChip('Firebase'),
+            SkillChip('IoT'),
+            SkillChip('Biometrics'),
             SkillChip('CI/CD'),
           ],
         ),

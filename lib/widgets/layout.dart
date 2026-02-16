@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 class Section extends StatelessWidget {
   final Widget child;
   final Color? background;
-  const Section({super.key, required this.child, this.background});
+  final BoxDecoration? decoration;
+
+  const Section({
+    super.key,
+    required this.child,
+    this.background,
+    this.decoration,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: background,
+      color: decoration == null ? background : null,
+      decoration: decoration,
       padding: const EdgeInsets.symmetric(vertical: 48),
       child: child,
     );
@@ -56,7 +64,14 @@ class SkillChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
       label: Text(label),
-      side: BorderSide(color: Theme.of(context).colorScheme.outlineVariant),
+      backgroundColor: Theme.of(context).colorScheme.surfaceContainerHigh,
+      side: BorderSide(
+        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
+      ),
+      elevation: 0,
+      labelStyle: TextStyle(
+        color: Theme.of(context).colorScheme.onSurfaceVariant,
+      ),
     );
   }
 }

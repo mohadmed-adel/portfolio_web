@@ -21,8 +21,19 @@ class PortfolioApp extends StatelessWidget {
       title: 'Mohamed Adel | Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF6C63FF), // Cool purple/indigo
+          brightness: Brightness.dark,
+          surface: const Color(0xFF1E1E2E), // Darker background
+          surfaceContainer: const Color(0xFF252538),
+        ),
+        scaffoldBackgroundColor: const Color(
+          0xFF121218,
+        ), // customized background
         useMaterial3: true,
+        fontFamily:
+            'Roboto', // Default, but explicit helps if we add fonts later
       ),
       home: const PortfolioHomePage(),
     );
@@ -186,16 +197,22 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
               ),
               Section(
                 key: _aboutKey,
-                background: Theme.of(
-                  context,
-                ).colorScheme.surfaceContainerHighest,
+                background: Theme.of(context).colorScheme.surface,
                 child: const SummaryAndSkills(),
               ),
-              Section(key: _appsKey, child: const ProjectsSection()),
-              Section(key: _projectsKey, child: const ExperienceSection()),
+              Section(
+                key: _appsKey,
+                background: Theme.of(context).colorScheme.surfaceContainerLow,
+                child: const ProjectsSection(),
+              ),
+              Section(
+                key: _projectsKey,
+                background: Theme.of(context).colorScheme.surface,
+                child: const ExperienceSection(),
+              ),
               Section(
                 key: _contactKey,
-                background: Theme.of(context).colorScheme.surfaceContainerHigh,
+                background: Theme.of(context).colorScheme.surfaceContainer,
                 child: const ContactSection(),
               ),
               const Footer(),
